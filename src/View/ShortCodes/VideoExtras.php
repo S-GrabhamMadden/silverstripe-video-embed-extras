@@ -10,7 +10,7 @@ class VideoExtras extends EmbedShortcodeProvider
     //     return parent::embedForTemplate($embed, $arguments);
     // }
 
-    public static function handle_shortcode($arguments, $content, $parser, $shortcode, $extra = array())
+    public static function handle_shortcode($arguments, $content, $parser, $shortcode, $extra = [])
     {
         $string = parent::handle_shortcode($arguments, $content, $parser, $shortcode, $extra);
         $string = str_replace('></iframe' , ' loading="lazy"></iframe', $string);
